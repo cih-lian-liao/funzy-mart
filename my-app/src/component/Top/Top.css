@@ -1,0 +1,52 @@
+.top {
+  background-color: #a5c926;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.top__contact {
+  display: flex;
+  gap: 30px;
+  margin-left: 10%;
+}
+
+.top__contact-phone,
+.top__contact-email {
+  display: flex;
+}
+
+.top__contact-text {
+  margin: 0;
+}
+
+.top__social {
+  display: flex;
+  align-items: center;
+  margin-right: 10%;
+  gap: 8px;
+}
+
+.top__social-item {
+  display: flex;
+  align-items: center;
+}
+
+.top__social-item a img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.top__social-item a img:hover {
+  transform: scale(1.1);
+}

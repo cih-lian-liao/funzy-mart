@@ -1,0 +1,87 @@
+/* 最外層區塊 */
+.section1 {
+  padding: 150px 20px;
+  background-color: #f5f5f5;
+}
+
+/* 卡片容器，排兩張卡片 */
+.section1__card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 130px;
+}
+
+/* 單張卡片 */
+.section1__card {
+  background-color: #ffc627;
+  width: 580px;
+  height: 240px;
+  border-radius: 16px;
+  position: relative;
+  overflow: visible; /* ✅ 改成 visible，允許圖片凸出 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 第二張卡片粉紅背景 */
+.section1__card:nth-child(2) {
+  background-color: #ff4f6d;
+}
+
+/* 卡片內部橫向排版 */
+.section1__card-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 40px;
+  position: relative;
+  margin-right: 40px;
+}
+
+/* 圖片容器：浮出左上角 */
+.section1__image-wrapper {
+  position: absolute;
+  top: -70px;
+  left: 20px;
+  width: 230px;
+  z-index: 100;
+}
+
+.section1__image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 文字區塊（靠右） */
+.section1__text-content {
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 標題 */
+.section1__card-title {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* Shop Now 按鈕樣式 */
+.section1__link {
+  background-color: #f1f1f1;
+  color: #111;
+  padding: 18px 36px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.section1__link:hover {
+  background-color: #ddd;
+}

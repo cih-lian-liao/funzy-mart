@@ -1,0 +1,35 @@
+.section-about-video {
+    background-color: #0000004d;
+    height: 70vh;
+}
+
+.section-about-video__content {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.section-about-video__subtitle {
+    margin-bottom: 40px;
+}
+
+.section-about-video__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+
+.section-about-video__description {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-about-video__play-icon {
+    background-color: #a5c926;
+    padding: 15px;
+    border-radius: 100%;
+}

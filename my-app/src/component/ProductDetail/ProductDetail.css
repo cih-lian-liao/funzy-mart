@@ -1,0 +1,170 @@
+/* 整體容器 */
+.product-detail {
+  padding: 60px 0;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* 頂部：資訊與圖片 */
+.product-detail__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* 左側文字資訊 */
+.product-detail__info {
+  flex: 1;
+  min-width: 320px;
+}
+
+.product-detail__title {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.product-detail__description {
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.product-detail__price {
+  font-size: 24px;
+  color: #a5c926;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* 加入購物車區域 */
+.product-detail__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-detail__quantity {
+  width: 50px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.product-detail__add-button {
+  background-color: #a5c926;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.product-detail__add-button:hover {
+  background-color: #a5c926;
+}
+
+/* 右側圖片與 SKU */
+.product-detail__image-wrapper {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.product-detail__image {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-detail__sku {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* 分隔線 */
+.product-detail__divider {
+  margin: 40px 0;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+/* 底部細節區 */
+.product-detail__section {
+  margin-top: 40px;
+}
+
+.product-detail__section-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #8bc34a;
+  padding-left: 12px;
+}
+
+/* 詳細描述與規格左右兩欄 */
+.product-detail__body {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* 商品描述 */
+.product-detail__richtext {
+  flex: 2;
+  min-width: 320px;
+}
+
+.product-detail__richtext h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.product-detail__richtext p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.product-detail__richtext ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.product-detail__richtext li {
+  margin-bottom: 6px;
+}
+
+/* 商品規格 */
+.product-detail__specs {
+  flex: 1;
+  min-width: 220px;
+}
+
+.product-detail__specs table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-detail__specs td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  text-align: left;
+}
+
+.product-detail__specs td:first-child {
+  font-weight: 500;
+  color: #555;
+}
+
+.product-detail__specs td:last-child {
+  text-align: right;
+}

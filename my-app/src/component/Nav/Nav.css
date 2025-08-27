@@ -1,0 +1,106 @@
+/* Nav容器 */
+.nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 40px;
+  position: sticky;
+  top: 30px;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+}
+
+/* 左右區域 Flex 排列 */
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 55px;
+}
+
+/* 左側：Logo + 選單 */
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: 7.5%;
+}
+
+/* Logo 樣式 */
+.nav__logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+.nav__logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 導覽選單 */
+.nav__menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+/* 每個 NavLink 的樣式 */
+.nav__item {
+  font-size: 16px;
+  color: #444;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* 滑過效果 */
+.nav__item:hover {
+  color: #a5c926;
+}
+
+/* 當前頁面高亮樣式 */
+.active {
+  font-weight: bold;
+  color: #98b726;
+  border-bottom: 2px solid #98b726;
+}
+
+/* 右側：Cart 區塊 */
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 7.5%;
+}
+
+.nav__cart-label {
+  font-size: 16px;
+  color: #444;
+  margin: 0;
+}
+
+.nav__cart-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease; 
+}
+
+.nav__cart-icon img:hover {
+  transform: scale(1.2);
+}
+
+
+.nav__cart-count {
+  background-color: #a5c926;
+  color: white;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

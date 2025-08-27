@@ -1,0 +1,65 @@
+.delivery {
+  padding: 60px 0 0 0;
+  background-color: #f5f5f5;
+}
+
+.delivery__content {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 35px;
+  margin: 0 10%;
+  padding: 60px 40px;
+  background-color: white;
+}
+
+.delivery__info {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  
+}
+
+.delivery__sidebar {
+  display: flex;
+  justify-content: center;
+  height: 240px;
+  width: 240px;
+  margin-right: 20px;
+}
+
+.delivery__card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.delivery__card-text {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+}
+
+.delivery__button {
+  background-color: #a5c926;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.delivery__button:hover {
+  background-color: #8aa622;
+}
+
+.design-list {
+    margin-left: 60px;
+}
