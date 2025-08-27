@@ -1,5 +1,5 @@
 
-# FunzyMart - A React E-commerce Website
+# 🧸 FunzyMart - A React E-commerce Website
 
 FunzyMart is a vibrant and modern e-commerce website built with React and Vite. This project showcases a complete, feature-rich online toy store designed to provide a seamless and engaging user experience. From browsing the product catalog to managing the shopping cart, FunzyMart is a comprehensive demonstration of modern frontend development practices.
 
