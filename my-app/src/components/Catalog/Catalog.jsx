@@ -60,7 +60,7 @@ export default function Catalog() {
             <div className="catalog__search-container">
               <input
                 type="text"
-                placeholder="Search products by name or SKU..."
+                placeholder="Search products"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="catalog__search-input"
