@@ -5,12 +5,12 @@ export default function Section4() {
   return (
     <section className="section-about-video">
       <div className="section-about-video__content">
-        <p className="section-about-video__subtitle">About The Shop</p>
-        <h1 className="section-about-video__title">Watch Our Story</h1>
+        <p className="section-about-video__subtitle">Our Story</p>
+        <h1 className="section-about-video__title">See How We Bring Joy to Families</h1>
         <p className="section-about-video__description">
-          There is no magic formula to write perfect ad copy. It is based on a
-          number of factors, including ad placement,<br /> demographic, even the
-          consumer’s mood.
+          From our humble beginnings to becoming a trusted name in children's toys, <br />
+          discover the passion and dedication behind every product we carefully select <br />
+          to bring smiles and laughter to families around the world.
         </p>
         <div className="section-about-video__play-icon">
           <img

@@ -9,13 +9,18 @@ export default function Hero() {
         <div className="hero__background">
           <div className="hero__card">
             <div className="hero__content">
-              <p className="hero__subtitle">Say Hello to FunzyMart!</p>
+              <p className="hero__subtitle">Welcome to FunzyMart!</p>
               <h1 className="hero__title">
-                Free Ecommerce <br />
-                Template for Webflow
+                Premium Toys & <br />
+                Stuffed Animals
               </h1>
+              <p className="hero__description">
+                Discover our amazing collection of high-quality toys, 
+                adorable stuffed animals, and educational wooden toys 
+                that bring joy to children and families.
+              </p>
               <Link to="/catalog" className="hero__cta-button">
-                Open Catalog
+                Shop Now
               </Link>
             </div>
           </div>
