@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./component/ScrollToTop/ScrollToTop.jsx";
-import Home from "./component/Home/Home.jsx";
-import Catalog from "./component/Catalog/Catalog.jsx";
-import ProductDetailPage from "./component/ProductDetailPage/ProductDetailPage.jsx";
-import Delivery from "./component/Delivery/Delivery.jsx";
-import About from "./component/About/About.jsx";
-import Contacts from "./component/Contacts/Contacts.jsx";
-import Admin from "./component/Admin/Admin.jsx";
-import NotFound from "./component/NotFound/Notfound.jsx";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
+import Home from "./components/Home/Home.jsx";
+import Catalog from "./components/Catalog/Catalog.jsx";
+import ProductDetailPage from "./components/ProductDetailPage/ProductDetailPage.jsx";
+import Delivery from "./components/Delivery/Delivery.jsx";
+import About from "./components/About/About.jsx";
+import Contacts from "./components/Contacts/Contacts.jsx";
+import Admin from "./components/Admin/Admin.jsx";
+import NotFound from "./components/NotFound/Notfound.jsx";
 
 export default function MainRoutes() {
   return (

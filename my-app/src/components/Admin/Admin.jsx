@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Admin.css';
-import Breadcrumb from '../BreadCrumb/BreadCrumb';
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import productsData from '../../data/products.js';
 
 export default function Admin() {

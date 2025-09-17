@@ -1,10 +1,10 @@
 import './App.css';
-import Nav from './component/Nav/Nav.jsx';
-import Top from './component/Top/Top.jsx'
+import Nav from './components/Nav/Nav.jsx';
+import Top from './components/Top/Top.jsx'
 import MainRoutes from './MainRoutes.jsx';
-import Subscribe from './component/Subscribe/Subscribe.jsx';
-import FollowInstagram from './component/FollowInstagram/FollowInstagram.jsx';
-import Footer from './component/Footer/Footer.jsx';
+import Subscribe from './components/Subscribe/Subscribe.jsx';
+import FollowInstagram from './components/FollowInstagram/FollowInstagram.jsx';
+import Footer from './components/Footer/Footer.jsx';
 import CartModal from './CartModal/CartModal.jsx';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx';
 

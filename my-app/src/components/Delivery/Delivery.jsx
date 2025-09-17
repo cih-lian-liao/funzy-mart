@@ -1,5 +1,5 @@
 import "./Delivery.css";
-import Breadcrumb from "../BreadCrumb/BreadCrumb";
+import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import Subscribe from "../Subscribe/Subscribe";
 import FollowInstagram from "../FollowInstagram/FollowInstagram";
 import Footer from "../Footer/Footer";

@@ -1,5 +1,5 @@
 import "./About.css";
-import Breadcrumb from "../BreadCrumb/BreadCrumb.jsx";
+import Breadcrumb from "../Breadcrumb/Breadcrumb.jsx";
 import Section4 from "../Section4/Section4.jsx";
 import Section5 from "../Section5/Section5.jsx";
 import Subscribe from "../Subscribe/Subscribe.jsx";

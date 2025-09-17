@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 import { getProductsByType } from "../../data/products.js";
 import ProductCard from "../ProductCard/ProductCard.jsx";
 import "./Catalog.css";
-import Breadcrumb from "../BreadCrumb/BreadCrumb.jsx";
+import Breadcrumb from "../Breadcrumb/Breadcrumb.jsx";
 
 export default function Catalog() {
   const [filterType, setFilterType] = useState("all");
