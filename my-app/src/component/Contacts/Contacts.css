@@ -62,7 +62,7 @@
     gap: 24px;
     width: 100%;
     max-width: 1200px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .contacts__card {
@@ -73,7 +73,7 @@
     transition: all 0.3s ease;
     border: 1px solid rgba(165, 201, 38, 0.1);
     flex: 1;
-    max-width: 300px;
+    max-width: 310px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
