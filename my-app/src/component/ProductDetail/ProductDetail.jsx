@@ -3,7 +3,7 @@ import { useCart } from "../../hooks/useCart.js";
 import "./ProductDetail.css";
 
 export default function ProductDetail({ product }) {
-  const { name, price, img, sku, details } = product;
+  const { name, price, img, sku, details, type } = product;
 
   const quantityRef = useRef();
 
@@ -16,17 +16,56 @@ export default function ProductDetail({ product }) {
     }
   };
 
+  // Generate product-specific content based on type
+  const getProductDescription = () => {
+    if (type === "stuffed-animals") {
+      return `Meet your child's new best friend! This adorable ${name.toLowerCase()} is crafted with premium soft materials and designed for endless cuddles. Perfect for bedtime stories, imaginative play, and creating precious childhood memories.`;
+    } else if (type === "wooden-toys") {
+      return `Discover the joy of learning through play! This beautifully crafted ${name.toLowerCase()} combines traditional wooden toy charm with modern safety standards. Designed to stimulate creativity, develop fine motor skills, and provide hours of educational fun.`;
+    }
+    return `A wonderful addition to your child's toy collection! This ${name.toLowerCase()} is designed with love and care to bring joy and learning to your little one's playtime.`;
+  };
+
+  const getProductFeatures = () => {
+    if (type === "stuffed-animals") {
+      return [
+        "Ultra-soft premium materials",
+        "Child-safe construction",
+        "Machine washable",
+        "Perfect for all ages"
+      ];
+    } else if (type === "wooden-toys") {
+      return [
+        "Natural wood construction",
+        "Non-toxic finishes",
+        "Educational value",
+        "Durable and long-lasting"
+      ];
+    }
+    return [
+      "High-quality materials",
+      "Child-safe design",
+      "Educational benefits",
+      "Great value for money"
+    ];
+  };
+
+  const getProductBenefits = () => {
+    if (type === "stuffed-animals") {
+      return `This cuddly companion provides comfort and security for your child. The soft texture and friendly design help develop emotional intelligence and provide a sense of comfort during bedtime or stressful moments.`;
+    } else if (type === "wooden-toys") {
+      return `This wooden toy encourages hands-on learning and creativity. It helps develop problem-solving skills, hand-eye coordination, and spatial awareness while providing a screen-free alternative to modern entertainment.`;
+    }
+    return `This carefully selected toy promotes healthy development and provides endless entertainment for your child.`;
+  };
+
   return (
     <section className="product-detail">
       <div className="product-detail__top">
         <div className="product-detail__info">
           <h1 className="product-detail__title">{name}</h1>
           <p className="product-detail__description">
-            A successful marketing plan relies heavily on the pulling-power of
-            advertising copy. Writing result-oriented ad copy is difficult, as
-            it must appeal to, entice, and convince consumers to take action.
-            There is no magic formula to write perfect ad copy. It is based on a
-            number of factors.
+            {getProductDescription()}
           </p>
           <p className="product-detail__price">${price.toFixed(2)} USD</p>
 
@@ -61,28 +100,21 @@ export default function ProductDetail({ product }) {
 
         <div className="product-detail__body">
           <div className="product-detail__richtext">
-            <h3>Add Your Product Description</h3>
+            <h3>Why Choose This {name}?</h3>
             <p>
-              The rich text element allows you to create and format headings,
-              paragraphs, blockquotes, images, and video all in one place
-              instead of having to add and format them individually. Just
-              double-click and easily create content.
+              {getProductBenefits()}
             </p>
 
-            <h3>Simple & Elegant Template</h3>
+            <h3>Key Features</h3>
             <ul>
-              <li>Beautifully Designed</li>
-              <li>Fully Responsive</li>
-              <li>CMS Content</li>
-              <li>Smooth Animations</li>
+              {getProductFeatures().map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
             </ul>
 
-            <h3>Perfect Choice for Your Business</h3>
+            <h3>Perfect Gift Choice</h3>
             <p>
-              Grabbing the consumer’s attention isn’t enough; you have to keep
-              that attention for at least a few seconds. This is where your
-              benefits come into play or a product description that sets your
-              offer apart from the others.
+              Whether you're looking for a birthday present, holiday gift, or just want to surprise your little one, this {name.toLowerCase()} makes an excellent choice. It's designed to grow with your child and provide years of enjoyment and learning.
             </p>
           </div>
 
