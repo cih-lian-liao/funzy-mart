@@ -6,6 +6,44 @@
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
+  position: relative;
+}
+
+/* Notification styles */
+.product-detail__notification {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  z-index: 10000;
+  animation: slideInRight 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+}
+
+.product-detail__notification--success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.product-detail__notification--error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* 頂部：資訊與圖片 */
@@ -42,32 +80,92 @@
   margin-bottom: 20px;
 }
 
+/* 庫存信息 */
+.product-detail__stock {
+  margin: 16px 0;
+}
+
+.product-detail__stock-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-detail__stock-badge.in-stock {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.product-detail__stock-badge.low-stock {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.product-detail__stock-badge.out-of-stock {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
 /* 加入購物車區域 */
 .product-detail__actions {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-top: 20px;
 }
 
 .product-detail__quantity {
-  width: 50px;
-  padding: 8px;
+  width: 60px;
+  padding: 10px 12px;
   font-size: 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.product-detail__quantity:focus {
+  outline: none;
+  border-color: #a5c926;
+}
+
+.product-detail__quantity:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
 }
 
 .product-detail__add-button {
   background-color: #a5c926;
   color: white;
-  padding: 10px 24px;
+  padding: 12px 28px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(165, 201, 38, 0.3);
 }
 
-.product-detail__add-button:hover {
-  background-color: #a5c926;
+.product-detail__add-button:hover:not(:disabled) {
+  background-color: #8cab1f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(165, 201, 38, 0.4);
+}
+
+.product-detail__add-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 /* 右側圖片與 SKU */
@@ -90,10 +188,12 @@
 
 /* 分隔線 */
 .product-detail__divider {
-  margin: 40px 0;
+  margin: 30px 0;
   border: none;
-  height: 1px;
-  background-color: #ddd;
+  height: 2px;
+  background: linear-gradient(135deg, #a5c926 0%, #8cab1f 100%);
+  border-radius: 1px;
+  box-shadow: 0 1px 3px rgba(165, 201, 38, 0.2);
 }
 
 /* 底部細節區 */

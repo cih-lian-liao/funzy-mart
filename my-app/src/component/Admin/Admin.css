@@ -1,0 +1,467 @@
+.admin {
+  background-color: #f8f9fa;
+  padding-top: 85px; /* Top (30px) + Nav (55px) = 85px */
+  min-height: 100vh;
+}
+
+.admin__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.admin__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.admin__title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 12px 0;
+}
+
+.admin__subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.admin__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.admin__tab {
+  background: none;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.admin__tab:hover {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.admin__tab.active {
+  background-color: #a5c926;
+  color: white;
+  box-shadow: 0 2px 8px rgba(165, 201, 38, 0.3);
+}
+
+.admin__content {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(165, 201, 38, 0.1);
+}
+
+/* Dashboard Styles */
+.admin__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.admin__stat-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease;
+}
+
+.admin__stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.admin__stat-icon {
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin__stat-content {
+  flex: 1;
+}
+
+.admin__stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 4px 0;
+}
+
+.admin__stat-label {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin__quick-actions {
+  text-align: center;
+}
+
+.admin__section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 24px 0;
+}
+
+.admin__action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.admin__action-btn {
+  background: linear-gradient(135deg, #a5c926 0%, #8cab1f 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(165, 201, 38, 0.3);
+}
+
+.admin__action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(165, 201, 38, 0.4);
+}
+
+/* Products Styles */
+.admin__section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.admin__add-btn {
+  background: linear-gradient(135deg, #a5c926 0%, #8cab1f 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(165, 201, 38, 0.3);
+}
+
+.admin__add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(165, 201, 38, 0.4);
+}
+
+.admin__products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.admin__product-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease;
+}
+
+.admin__product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.admin__product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.admin__product-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+}
+
+.admin__product-sku {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+.admin__product-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.admin__control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin__control-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  min-width: 50px;
+}
+
+.admin__control-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.admin__control-input:focus {
+  outline: none;
+  border-color: #a5c926;
+}
+
+.admin__product-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.admin__edit-btn,
+.admin__delete-btn {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin__edit-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.admin__edit-btn:hover {
+  background-color: #138496;
+}
+
+.admin__delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.admin__delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Orders Styles */
+.admin__empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.admin__empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.admin__empty-state h3 {
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.admin__empty-state p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Inventory Styles */
+.admin__inventory-table {
+  overflow-x: auto;
+}
+
+.admin__inventory-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin__inventory-table th {
+  background-color: #f8f9fa;
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.admin__inventory-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.admin__inventory-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin__inventory-product img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.admin__stock-input {
+  width: 80px;
+  padding: 6px 8px;
+  border: 2px solid #e9ecef;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.admin__stock-input:focus {
+  outline: none;
+  border-color: #a5c926;
+}
+
+.admin__stock-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin__stock-status.in-stock {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.admin__stock-status.low-stock {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.admin__stock-status.out-of-stock {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.admin__update-btn {
+  background-color: #a5c926;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin__update-btn:hover {
+  background-color: #8cab1f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin__container {
+    padding: 20px 10px;
+  }
+  
+  .admin__title {
+    font-size: 36px;
+  }
+  
+  .admin__tabs {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .admin__tab {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .admin__content {
+    padding: 20px;
+  }
+  
+  .admin__stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin__action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .admin__section-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .admin__products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin__inventory-table {
+    font-size: 14px;
+  }
+  
+  .admin__inventory-table th,
+  .admin__inventory-table td {
+    padding: 12px 8px;
+  }
+}

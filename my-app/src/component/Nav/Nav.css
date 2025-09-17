@@ -1,13 +1,12 @@
-/* Nav容器 */
+/* Nav容器 - 與網站整體風格保持一致 */
 .nav {
   background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 10px 40px;
+  border-bottom: 1px solid #e9ecef;
+  padding: 15px 10%;
   position: sticky;
   top: 30px;
   z-index: 999;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* 左右區域 Flex 排列 */
@@ -16,44 +15,53 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  height: 55px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* 左側：Logo + 選單 */
 .nav__left {
   display: flex;
   align-items: center;
-  gap: 40px;
-  margin-left: 7.5%;
+  gap: 50px;
 }
 
-/* Logo 樣式 */
+/* Logo 樣式 - 與網站風格一致 */
 .nav__logo {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
   margin: 0;
 }
+
 .nav__logo-link {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
+}
+
+.nav__logo-link:hover {
+  color: #a5c926;
 }
 
 /* 導覽選單 */
 .nav__menu {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
 
-/* 每個 NavLink 的樣式 */
+/* 每個 NavLink 的樣式 - 簡潔專業 */
 .nav__item {
   font-size: 16px;
-  color: #444;
+  color: #666;
   text-decoration: none;
-  transition: color 0.2s ease;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 /* 滑過效果 */
@@ -61,46 +69,127 @@
   color: #a5c926;
 }
 
-/* 當前頁面高亮樣式 */
-.active {
-  font-weight: bold;
-  color: #98b726;
-  border-bottom: 2px solid #98b726;
+/* 當前頁面高亮樣式 - 與網站按鈕風格一致 */
+.nav__item.active {
+  color: #a5c926;
+  font-weight: 600;
+}
+
+.nav__item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a5c926;
+  border-radius: 1px;
 }
 
 /* 右側：Cart 區塊 */
 .nav__right {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-right: 7.5%;
+  gap: 15px;
 }
 
 .nav__cart-label {
   font-size: 16px;
-  color: #444;
+  color: #666;
   margin: 0;
+  font-weight: 500;
+}
+
+.nav__cart-icon {
+  position: relative;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.nav__cart-icon:hover {
+  background-color: rgba(165, 201, 38, 0.1);
 }
 
 .nav__cart-icon img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.2s ease; 
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
 }
 
-.nav__cart-icon img:hover {
-  transform: scale(1.2);
+.nav__cart-icon:hover img {
+  transform: scale(1.1);
 }
-
 
 .nav__cart-count {
   background-color: #a5c926;
   color: white;
-  font-size: 14px;
-  width: 30px;
-  height: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    padding: 12px 5%;
+  }
+  
+  .nav__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav__left {
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav__logo {
+    font-size: 24px;
+  }
+  
+  .nav__menu {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav__item {
+    font-size: 15px;
+  }
+  
+  .nav__right {
+    gap: 12px;
+  }
+  
+  .nav__cart-icon img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .nav__cart-count {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav__menu {
+    gap: 15px;
+  }
+  
+  .nav__item {
+    font-size: 14px;
+  }
 }

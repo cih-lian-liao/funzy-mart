@@ -44,10 +44,12 @@
 }
 
 .section-highlight__divider {
-  width: 100px;
+  width: 120px;
   height: 4px;
-  background-color: #a5c926;
-  margin: 40px 0;
+  background: linear-gradient(135deg, #a5c926 0%, #8cab1f 100%);
+  border-radius: 2px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(165, 201, 38, 0.3);
 }
 
 .section-highlight__description {

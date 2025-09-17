@@ -1,6 +1,14 @@
 // Unified product data management
 // All product data is centrally managed in this file
 
+// Helper function to add stock to products
+const addStockToProducts = (products) => {
+  return products.map((product) => ({
+    ...product,
+    stock: Math.floor(Math.random() * 20) + 5 // Random stock between 5-24
+  }));
+};
+
 const products = [
   {
     id: "teddy-bear",
@@ -150,19 +158,19 @@ const products = [
 
 // Utility function: Filter products by type
 export const getProductsByType = (type) => {
-  if (type === "all") return products;
-  return products.filter(product => product.type === type);
+  if (type === "all") return productsWithStock;
+  return productsWithStock.filter(product => product.type === type);
 };
 
 // Utility function: Find product by ID
 export const getProductById = (id) => {
-  return products.find(product => product.id === id);
+  return productsWithStock.find(product => product.id === id);
 };
 
 // Utility function: Get featured products for homepage (first 4 of each type)
 export const getFeaturedProducts = () => {
-  const stuffedAnimals = products.filter(p => p.type === "stuffed-animals").slice(0, 4);
-  const woodenToys = products.filter(p => p.type === "wooden-toys").slice(0, 4);
+  const stuffedAnimals = productsWithStock.filter(p => p.type === "stuffed-animals").slice(0, 4);
+  const woodenToys = productsWithStock.filter(p => p.type === "wooden-toys").slice(0, 4);
   
   return {
     stuffedAnimals,
@@ -170,5 +178,8 @@ export const getFeaturedProducts = () => {
   };
 };
 
+// Apply stock to all products
+const productsWithStock = addStockToProducts(products);
+
 // Export all products
-export default products;
+export default productsWithStock;

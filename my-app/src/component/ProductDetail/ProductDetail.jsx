@@ -1,18 +1,30 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useCart } from "../../hooks/useCart.js";
 import "./ProductDetail.css";
 
 export default function ProductDetail({ product }) {
-  const { name, price, img, sku, details, type } = product;
+  const { name, price, img, sku, details, type, stock } = product;
 
   const quantityRef = useRef();
+  const [notification, setNotification] = useState(null);
 
   const { addToCart } = useCart();
+
+  // Show notification
+  const showNotification = (message, type = 'success') => {
+    setNotification({ message, type });
+    setTimeout(() => setNotification(null), 3000);
+  };
 
   const handleAddToCart = () => {
     const qty = parseInt(quantityRef.current.value, 10);
     if (qty > 0) {
-      addToCart(product, qty);
+      const result = addToCart(product, qty);
+      if (result.success) {
+        showNotification(result.message, 'success');
+      } else {
+        showNotification(result.message, 'error');
+      }
     }
   };
 
@@ -61,6 +73,13 @@ export default function ProductDetail({ product }) {
 
   return (
     <section className="product-detail">
+      {/* Notification */}
+      {notification && (
+        <div className={`product-detail__notification product-detail__notification--${notification.type}`}>
+          {notification.message}
+        </div>
+      )}
+
       <div className="product-detail__top">
         <div className="product-detail__info">
           <h1 className="product-detail__title">{name}</h1>
@@ -68,21 +87,30 @@ export default function ProductDetail({ product }) {
             {getProductDescription()}
           </p>
           <p className="product-detail__price">${price.toFixed(2)} USD</p>
+          
+          {/* Stock information */}
+          <div className="product-detail__stock">
+            <span className={`product-detail__stock-badge ${stock > 10 ? 'in-stock' : stock > 0 ? 'low-stock' : 'out-of-stock'}`}>
+              {stock > 10 ? '✅ In Stock' : stock > 0 ? `⚠️ Only ${stock} left` : '❌ Out of Stock'}
+            </span>
+          </div>
 
           <div className="product-detail__actions">
-            
             <input
               type="number"
               min="1"
+              max={stock || 999}
               defaultValue="1"
               ref={quantityRef} 
               className="product-detail__quantity"
+              disabled={stock === 0}
             />
             <button
               className="product-detail__add-button"
               onClick={handleAddToCart}
+              disabled={stock === 0}
             >
-              Add to Cart
+              {stock === 0 ? 'Out of Stock' : 'Add to Cart'}
             </button>
           </div>
         </div>
