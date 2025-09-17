@@ -88,32 +88,10 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <p>
-          Created with love by{" "}
-          <a
-            href="https://www.elasticthemes.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Elastic Themes
-          </a>
+          © 2025 FunzyMart. All rights reserved.
         </p>
         <p>
-          Powered by Webflow •{" "}
-          <a
-            href="https://webflow.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Style Guide
-          </a>{" "}
-          •{" "}
-          <a
-            href="https://webflow.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Licensing
-          </a>
+          Bringing joy and learning to families worldwide.
         </p>
       </div>
     </footer>
