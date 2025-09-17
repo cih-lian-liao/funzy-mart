@@ -12,6 +12,7 @@ export default function Section3() {
         <h2 className="section-toys__title">Wooden Toys</h2>
         <Link to="/catalog" className="section-toys__link">
           See All Toys
+          <span className="section-toys__arrow">→</span>
         </Link>
       </div>
       <div className="divider-wrapper">

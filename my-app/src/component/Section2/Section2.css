@@ -25,6 +25,26 @@
     border-bottom: 3px solid #a5c926;
 }
 
+.section-toys__arrow {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #a5c926;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 8px;
+    transition: all 0.3s ease;
+}
+
+.section-toys__link:hover .section-toys__arrow {
+    background-color: #8cab1f;
+    transform: translateX(3px);
+}
+
 /* 分隔線容器 */
 .divider-wrapper {
   display: flex;
