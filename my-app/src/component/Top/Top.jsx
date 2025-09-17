@@ -9,7 +9,7 @@ export default function Top() {
           <p className="top__contact-text">Call Us: +1 213 974-9090</p>
         </div>
         <div className="top__contact--email">
-          <p className="top__contact-text">Email: FunzyMart@Gmail.com</p>
+          <p className="top__contact-text">Email: funzymart@gmail.com</p>
         </div>
       </div>
 
