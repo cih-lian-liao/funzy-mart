@@ -1,5 +1,5 @@
 import "./CartModal.css";
-import { useCart } from "../CartContext.jsx";
+import { useCart } from "../hooks/useCart.js";
 
 export default function CartModal() {
   const {
@@ -21,7 +21,7 @@ export default function CartModal() {
     <div className="cart-modal__overlay" onClick={() => setIsCartOpen(false)}>
       <div
         className="cart-modal__container"
-        onClick={(e) => e.stopPropagation()} // 防止點 Modal 裡面就關掉
+        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
       >
         <div className="cart-modal__header">
           <h3>🛒 Your Cart</h3>
@@ -51,7 +51,7 @@ export default function CartModal() {
                   </button>
                 </div>
 
-                {/* ✅ 新增數量輸入欄位 */}
+                {/* Quantity input field */}
                 <input
                   type="number"
                   min="1"

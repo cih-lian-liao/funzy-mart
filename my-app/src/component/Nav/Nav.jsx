@@ -1,20 +1,20 @@
-// ✅【修改 1】引入 useCart，取得購物車資料與開關控制
-import { useCart } from "../../CartContext.jsx";
+// Import useCart hook to get cart data and control functions
+import { useCart } from "../../hooks/useCart.js";
 import React from "react";
 import "./Nav.css";
 import { Link, NavLink } from "react-router-dom";
 
 export default function Nav() {
-  // ✅【修改 2】從 Context 取得 cartItems 與 setIsCartOpen
+  // Get cartItems and setIsCartOpen from Context
   const { cartItems, setIsCartOpen } = useCart();
 
-  // ✅【修改 3】計算購物車中商品總數量
+  // Calculate total quantity of items in cart
   const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <nav className="nav">
       <div className="nav__container">
-        {/* 左側 Logo 與選單 */}
+        {/* Left side: Logo and menu */}
         <div className="nav__left">
           <p className="nav__logo">
             <Link
@@ -84,12 +84,12 @@ export default function Nav() {
           </ul>
         </div>
 
-        {/* ✅ 右側購物車區塊：可以開啟購物車彈窗 */}
+        {/* Right side: Cart section - can open cart modal */}
         <div className="nav__right">
           <p className="nav__cart-label">Cart</p>
           <div
             className="nav__cart-icon"
-            onClick={() => setIsCartOpen(true)} // ✅【修改 4】：點擊開啟購物車 Modal
+            onClick={() => setIsCartOpen(true)} // Click to open cart modal
           >
             <img
               src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5baf75c3bf02346640399fec_cart-icon.svg"
@@ -97,7 +97,7 @@ export default function Nav() {
             />
           </div>
 
-          {/* ✅ 顯示購物車商品總數 */}
+          {/* Display total quantity of items in cart */}
           <div className="nav__cart-count">
             <p>{totalQuantity}</p>
           </div>

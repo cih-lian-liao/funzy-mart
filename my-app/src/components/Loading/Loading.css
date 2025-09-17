@@ -1,0 +1,57 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 40px;
+}
+
+.loading__container {
+  text-align: center;
+}
+
+.loading__spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #a5c926;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+.loading__message {
+  color: #6c757d;
+  font-size: 1rem;
+  margin: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 不同大小的載入動畫 */
+.loading--small .loading__spinner {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.loading--large .loading__spinner {
+  width: 60px;
+  height: 60px;
+  border-width: 6px;
+}
+
+/* 全屏載入 */
+.loading--fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  min-height: 100vh;
+}

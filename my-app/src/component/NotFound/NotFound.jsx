@@ -5,9 +5,9 @@ export default function NotFound() {
   return (
     <div style={{ textAlign: "center", paddingTop: "100px" }}>
       <h1>404 - Page Not Found</h1>
-      <p>Oops! 找不到這個頁面。</p>
+      <p>Oops! The page you're looking for doesn't exist.</p>
       <p>
-        <Link to="/">← 回到首頁</Link>
+        <Link to="/">← Back to Home</Link>
       </p>
     </div>
   );

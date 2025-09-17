@@ -1,20 +1,13 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import goodList from "./goodsList.js";
+import { getProductsByType } from "../../data/products.js";
 import ProductCard from "../ProductCard/ProductCard.jsx";
 import "./Catalog.css";
-import Subscribe from "../Subscribe/Subscribe.jsx";
-import FollowInstagram from "../FollowInstagram/FollowInstagram";
-import Footer from "../Footer/Footer.jsx";
 import Breadcrumb from "../BreadCrumb/BreadCrumb.jsx";
 
 export default function Catalog() {
   const [filterType, setFilterType] = useState("all");
 
-  const filteredProducts =
-    filterType === "all"
-      ? goodList
-      : goodList.filter((item) => item.type === filterType);
+  const filteredProducts = getProductsByType(filterType);
 
   return (
     <div>

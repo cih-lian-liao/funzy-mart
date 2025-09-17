@@ -5,7 +5,7 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // 每次切換路由時，滾動到頁面頂端
+    // Scroll to top when route changes
     window.scrollTo(0, 0);
   }, [pathname]);
 

@@ -6,19 +6,22 @@ import Subscribe from './component/Subscribe/Subscribe.jsx';
 import FollowInstagram from './component/FollowInstagram/FollowInstagram.jsx';
 import Footer from './component/Footer/Footer.jsx';
 import CartModal from './CartModal/CartModal.jsx';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx';
 
 
 function App() {
   return (
-    <div className="App">
-      <CartModal></CartModal>
-      <Top></Top>
-      <Nav></Nav>
-      <MainRoutes></MainRoutes>
-      <Subscribe></Subscribe>
-      <FollowInstagram></FollowInstagram>
-      <Footer></Footer>
-    </div>
+    <ErrorBoundary>
+      <div className="App">
+        <CartModal></CartModal>
+        <Top></Top>
+        <Nav></Nav>
+        <MainRoutes></MainRoutes>
+        <Subscribe></Subscribe>
+        <FollowInstagram></FollowInstagram>
+        <Footer></Footer>
+      </div>
+    </ErrorBoundary>
   );
 }
 

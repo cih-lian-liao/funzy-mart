@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useCart } from "../../CartContext.jsx";
+import { useCart } from "../../hooks/useCart.js";
 import "./ProductDetail.css";
 
 export default function ProductDetail({ product }) {

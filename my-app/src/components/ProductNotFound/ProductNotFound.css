@@ -1,0 +1,127 @@
+.product-not-found {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+}
+
+.product-not-found__container {
+  text-align: center;
+  max-width: 600px;
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-not-found__icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.product-not-found__title {
+  color: #dc3545;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.product-not-found__message {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.product-not-found__product-id {
+  display: block;
+  font-family: monospace;
+  background-color: #e9ecef;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.product-not-found__suggestions {
+  text-align: left;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.product-not-found__suggestions h3 {
+  color: #495057;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.product-not-found__suggestions ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.product-not-found__suggestions li {
+  color: #6c757d;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.product-not-found__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-not-found__button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.product-not-found__button--primary {
+  background-color: #a5c926;
+  color: white;
+}
+
+.product-not-found__button--primary:hover {
+  background-color: #94c327;
+  transform: translateY(-2px);
+}
+
+.product-not-found__button--secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.product-not-found__button--secondary:hover {
+  background-color: #545b62;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .product-not-found__container {
+    padding: 30px 20px;
+  }
+  
+  .product-not-found__title {
+    font-size: 1.5rem;
+  }
+  
+  .product-not-found__actions {
+    flex-direction: column;
+  }
+  
+  .product-not-found__button {
+    width: 100%;
+  }
+}

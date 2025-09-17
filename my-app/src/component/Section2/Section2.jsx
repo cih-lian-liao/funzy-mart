@@ -1,9 +1,11 @@
 import "./Section2.css";
-import section2DemoProductList from "./Section2DemoProductList.js";
+import { getFeaturedProducts } from "../../data/products.js";
 import ProductCard from "../ProductCard/ProductCard.jsx";
 import { Link } from "react-router-dom";
 
 export default function Section2() {
+  const { stuffedAnimals } = getFeaturedProducts();
+  
   return (
     <section className="section-toys">
       <div className="section-toys__header">
@@ -18,7 +20,7 @@ export default function Section2() {
       </div>
 
       <div className="section-toys__product-grid">
-        {section2DemoProductList.map((product) => (
+        {stuffedAnimals.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

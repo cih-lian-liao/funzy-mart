@@ -53,31 +53,31 @@ export default function Footer() {
         </ul>
 
         <div className="footer__socials">
-          <a href="https://elasticthemes.com" rel="noopener noreferrer">
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5bae5eec5227792568635e37_twitter-icon-white.svg"
               alt="Twitter"
             />
           </a>
-          <a href="https://elasticthemes.com" rel="noopener noreferrer">
+          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5bae5eec3cb36463d4cf4661_facebook-icon-white.svg"
               alt="Facebook"
             />
           </a>
-          <a href="https://elasticthemes.com" rel="noopener noreferrer">
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5bae5eec7fe624275552217c_instagram-icon-white.svg"
               alt="Instagram"
             />
           </a>
-          <a href="https://elasticthemes.com" rel="noopener noreferrer">
+          <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5bae5eec6e93377c0bbdba8a_pinterest-icon-white.svg"
               alt="Pinterest"
             />
           </a>
-          <a href="https://elasticthemes.com" rel="noopener noreferrer">
+          <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5bae5eecfff242b7c309e311_youtube-icon.svg"
               alt="YouTube"
