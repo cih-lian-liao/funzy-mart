@@ -476,8 +476,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### **Project Maintainer**
 - **GitHub**: [@cih-lian-liao](https://github.com/cih-lian-liao)
-- **Email**: [Your Email]
-- **LinkedIn**: [Your LinkedIn]
+- **Email**: [cihlianliao@gmail.com](mailto:cihlianliao@gmail.com)
+- **LinkedIn**: [cihlianliao](https://www.linkedin.com/in/cihlianliao/)
 
 ### **Community**
 - **Discussions**: [GitHub Discussions](https://github.com/cih-lian-liao/funzy-mart/discussions)
