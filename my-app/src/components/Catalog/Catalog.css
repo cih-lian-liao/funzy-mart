@@ -1,7 +1,7 @@
 
 .catalog {
     background-color: #f5f5f5;
-    padding-top: 60px;
+    padding-top: 90px; /* 為 Top + Nav 留出空間 */
 }
 
 .catalog__header {
@@ -237,7 +237,11 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 479px) {
+  .catalog {
+    padding-top: 84px; /* Top (36px) + Nav (46px) + 額外間距 (2px) */
+  }
+  
   .catalog__header {
     margin: 0 5%;
   }
@@ -268,6 +272,94 @@
   
   .catalog__no-results {
     margin: 20px 0;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .catalog {
+    padding-top: 88px; /* Top (38px) + Nav (48px) + 額外間距 (2px) */
+  }
+  
+  .catalog__header {
+    margin: 0 5%;
+  }
+  
+  .catalog__controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  
+  .catalog__filter {
+    justify-content: center;
+  }
+  
+  .catalog__sort {
+    justify-content: center;
+  }
+  
+  .catalog__search-container {
+    max-width: 100%;
+  }
+  
+  .catalog__product-grid {
+    margin: 0 6%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  .catalog__no-results {
+    margin: 20px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .catalog {
+    padding-top: 90px; /* Top (40px) + Nav (50px) */
+  }
+  
+  .catalog__header {
+    margin: 0 5%;
+  }
+  
+  .catalog__controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  
+  .catalog__filter {
+    justify-content: center;
+  }
+  
+  .catalog__sort {
+    justify-content: center;
+  }
+  
+  .catalog__search-container {
+    max-width: 100%;
+  }
+  
+  .catalog__product-grid {
+    margin: 0 6%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  .catalog__no-results {
+    margin: 20px 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .catalog {
+    padding-top: 92px; /* Top (42px) + Nav (52px) - 額外間距 (2px) */
+  }
+}
+
+@media (min-width: 1200px) {
+  .catalog {
+    padding-top: 94px; /* Top (44px) + Nav (54px) - 額外間距 (4px) */
   }
 }
 
