@@ -14,6 +14,8 @@ export default function CartModal() {
 
   const [notification, setNotification] = useState(null);
   const [isCheckingOut, setIsCheckingOut] = useState(false);
+  const [showSuccessScreen, setShowSuccessScreen] = useState(false);
+  const [orderDetails, setOrderDetails] = useState(null);
 
   // Show notification
   const showNotification = (message, type = 'success') => {
@@ -34,16 +36,40 @@ export default function CartModal() {
       // Simulate checkout process
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // In a real app, this would integrate with payment processing
-      showNotification('Order placed successfully! Thank you for your purchase! 🎉', 'success');
+      // Generate order details
+      const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      const tax = subtotal * 0.085;
+      const total = subtotal + tax;
+      const orderNumber = `FM-${Date.now()}`;
+      
+      const orderInfo = {
+        orderNumber,
+        items: cartItems,
+        subtotal,
+        tax,
+        total,
+        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleTimeString()
+      };
+      
+      setOrderDetails(orderInfo);
+      setShowSuccessScreen(true);
+      
+      // Clear cart after showing success screen
       clearCart();
-      setIsCartOpen(false);
     } catch (error) {
       showNotification('Checkout failed. Please try again.', 'error');
       console.error('Checkout error:', error);
     } finally {
       setIsCheckingOut(false);
     }
+  };
+
+  // Handle closing success screen
+  const handleCloseSuccessScreen = () => {
+    setShowSuccessScreen(false);
+    setOrderDetails(null);
+    setIsCartOpen(false);
   };
 
   // Handle quantity update with error handling
@@ -55,6 +81,69 @@ export default function CartModal() {
   };
 
   if (!isCartOpen) return null;
+
+  // Show success screen if checkout was successful
+  if (showSuccessScreen && orderDetails) {
+    return (
+      <div className="cart-modal__overlay" onClick={handleCloseSuccessScreen}>
+        <div
+          className="cart-modal__success-container"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="cart-modal__success-content">
+            <h2 className="cart-modal__success-title">Order Placed Successfully!</h2>
+            <p className="cart-modal__success-message">
+              Thank you for your purchase! Your order has been confirmed.
+            </p>
+            
+            <div className="cart-modal__order-details">
+              <h3>Order Details</h3>
+              <div className="cart-modal__order-info">
+                <p><strong>Order Number:</strong> {orderDetails.orderNumber}</p>
+                <p><strong>Date:</strong> {orderDetails.date}</p>
+                <p><strong>Time:</strong> {orderDetails.time}</p>
+              </div>
+              
+              <div className="cart-modal__order-items">
+                <h4>Items Ordered:</h4>
+                {orderDetails.items.map((item) => (
+                  <div key={item.id} className="cart-modal__order-item">
+                    <img src={item.img} alt={item.name} className="cart-modal__order-item-img" />
+                    <div className="cart-modal__order-item-info">
+                      <p className="cart-modal__order-item-name">{item.name}</p>
+                      <p className="cart-modal__order-item-qty">Qty: {item.quantity}</p>
+                      <p className="cart-modal__order-item-price">${(item.price * item.quantity).toFixed(2)}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="cart-modal__order-summary">
+                <p><strong>Subtotal:</strong> ${orderDetails.subtotal.toFixed(2)}</p>
+                <p><strong>Tax:</strong> ${orderDetails.tax.toFixed(2)}</p>
+                <p className="cart-modal__order-total"><strong>Total:</strong> ${orderDetails.total.toFixed(2)}</p>
+              </div>
+            </div>
+            
+            <div className="cart-modal__success-actions">
+              <button 
+                className="cart-modal__continue-shopping"
+                onClick={handleCloseSuccessScreen}
+              >
+                Continue Shopping
+              </button>
+              <button 
+                className="cart-modal__view-orders"
+                onClick={handleCloseSuccessScreen}
+              >
+                View Order History
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
