@@ -1,5 +1,5 @@
 import './Contacts.css';
-import Breadcrumb from "../Breadcrumb/Breadcrumb";
+import Breadcrumb from "../Breadcrumb/BreadCrumb.jsx";
 
 export default function Contacts() {
   return (
