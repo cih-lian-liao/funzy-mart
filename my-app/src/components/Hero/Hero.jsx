@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="hero__background">
           <div className="hero__card">
             <div className="hero__content">
-              <p className="hero__subtitle">Welcome to FunzyMart!</p>
+              <p className="hero__subtitle">Welcome to FunzyMart! 🚀</p>
               <h1 className="hero__title">
                 Premium Toys & <br />
                 Stuffed Animals
