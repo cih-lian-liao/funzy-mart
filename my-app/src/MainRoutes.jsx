@@ -7,7 +7,7 @@ import Delivery from "./components/Delivery/Delivery.jsx";
 import About from "./components/About/About.jsx";
 import Contacts from "./components/Contacts/Contacts.jsx";
 import Admin from "./components/Admin/Admin.jsx";
-import NotFound from "./components/NotFound/Notfound.jsx";
+import NotFound from "./components/NotFound/NotFound.jsx";
 
 export default function MainRoutes() {
   return (
