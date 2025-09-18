@@ -8,8 +8,9 @@
 .section1__card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 130px;
+  justify-content: center; /* 始終置中 */
+  gap: 30px; /* 卡片間距，避免貼邊 */
+  margin: 0 auto; /* 容器本身置中 */
 }
 
 /* 單張卡片 */
@@ -34,10 +35,10 @@
   display: flex;
   height: 100%;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: right; /* 置中內容 */
   padding: 0 40px;
   position: relative;
-  margin-right: 40px;
+  margin-right: 40px; /* 取消右偏移 */
 }
 
 /* 圖片容器：浮出左上角 */
@@ -61,7 +62,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* 置中文字 */
 }
 
 /* 標題 */
@@ -84,4 +85,164 @@
 
 .section1__link:hover {
   background-color: #ddd;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - SECTION 1
+   ======================================== */
+
+/* Large desktop (<= 1200px) */
+@media (max-width: 1200px) {
+  .section1 {
+    padding: 130px 20px;
+  }
+
+  .section1__card-container {
+    margin: 0 8%;
+  }
+
+  .section1__card {
+    width: calc(50% - 16px);
+    height: 230px;
+  }
+
+  .section1__image-wrapper {
+    top: -50px;
+    left: 10px;
+    width: 200px;
+  }
+
+  .section1__card-title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .section1__link {
+    padding: 16px 28px;
+    font-size: 15px;
+  }
+}
+
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  .section1 {
+    padding: 120px 16px;
+  }
+
+  .section1__card-container {
+    margin: 0 6%;
+    gap: 16px;
+  }
+
+  .section1__card {
+    width: calc(50% - 12px);
+    height: 220px;
+  }
+
+  .section1__card-content {
+    padding: 0 28px;
+    margin-right: 28px;
+  }
+
+  .section1__image-wrapper {
+    top: -50px;
+    left: 16px;
+    width: 180px;
+  }
+
+  .section1__card-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .section1__link {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .section1 {
+    padding: 100px 14px;
+  }
+
+  .section1__card-container {
+    margin: 0 5%;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .section1__card {
+    width: 100%;
+    height: 220px;
+  }
+
+  .section1__card-content {
+    padding: 0 24px;
+    margin-right: 24px;
+  }
+
+  .section1__image-wrapper {
+    top: -44px;
+    left: 14px;
+    width: 160px;
+  }
+
+  .section1__text-content {
+    align-items: center; /* 保持置中 */
+  }
+
+  .section1__card-title {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  .section1__link {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+}
+
+/* Small mobile (<= 480px) */
+@media (max-width: 480px) {
+  .section1 {
+    padding: 90px 12px;
+  }
+
+  .section1__card-container {
+    margin: 0 4%;
+    gap: 18px;
+  }
+
+  .section1__card {
+    width: 100%;
+    height: auto;
+    min-height: 210px;
+  }
+
+  .section1__card-content {
+    padding: 0 18px;
+    margin-right: 18px;
+  }
+
+  .section1__image-wrapper {
+    top: -36px;
+    left: 12px;
+    width: 130px;
+  }
+
+  .section1__text-content {
+    align-items: center; /* 保持置中 */
+  }
+
+  .section1__card-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .section1__link {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
 }

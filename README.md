@@ -226,18 +226,18 @@ User Interaction → Component State → Context API → Local Storage
 1. **Clone the repository**
    ```bash
    git clone https://github.com/cih-lian-liao/funzy-mart.git
-   cd funzy-mart/my-app
-   ```
+    cd funzy-mart/my-app
+    ```
 
 2. **Install dependencies**
    ```bash
-   npm install
-   ```
+    npm install
+    ```
 
 3. **Start development server**
    ```bash
-   npm run dev
-   ```
+    npm run dev
+    ```
 
 4. **Open your browser**
    ```
