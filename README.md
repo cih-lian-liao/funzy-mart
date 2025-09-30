@@ -12,7 +12,7 @@
 [![React Router](https://img.shields.io/badge/React%20Router-7.7.1-ca4245?style=flat-square&logo=react-router)](https://reactrouter.com/)
 [![ESLint](https://img.shields.io/badge/ESLint-9.30.1-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 
-[🚀 Live Demo](https://cih-lian-liao.github.io/funzy-mart/) | [📖 Documentation](#documentation) | [🤝 Contributing](#contributing) | [📄 License](#license)
+[🚀 Live Demo](https://funzy-mart.vercel.app/) | [📖 Documentation](#documentation) | [🤝 Contributing](#contributing) | [📄 License](#license)
 
 </div>
 
