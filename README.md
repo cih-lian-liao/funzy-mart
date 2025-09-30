@@ -102,7 +102,45 @@ FunzyMart is a modern, full-featured e-commerce website built with React 19 and 
 
 ---
 
- 
+## 🗂️ Project Structure
+
+```
+funzy-mart/
+├── my-app/
+│   ├── public/                    # Static assets (icons, images)
+│   ├── src/
+│   │   ├── components/            # Reusable UI components (by feature)
+│   │   │   ├── About/             # About page
+│   │   │   ├── Admin/             # Admin dashboard
+│   │   │   ├── Catalog/           # Product catalog and filters
+│   │   │   ├── Contacts/          # Contact page
+│   │   │   ├── Delivery/          # Shipping & returns info
+│   │   │   ├── Footer/            # Footer layout
+│   │   │   ├── Hero/              # Landing hero section
+│   │   │   ├── Home/              # Homepage sections
+│   │   │   ├── Loading/           # Loading states
+│   │   │   ├── Nav/               # Top navigation with cart
+│   │   │   ├── NotFound/          # 404 page
+│   │   │   ├── ProductCard/       # Product tile
+│   │   │   ├── ProductDetail/     # Product details
+│   │   │   ├── ProductDetailPage/ # Product page wrapper
+│   │   │   ├── ScrollToTop/       # Scroll behavior
+│   │   │   ├── Subscribe/         # Newsletter
+│   │   │   └── Top/               # Top info bar
+│   │   ├── CartModal/             # Shopping cart modal
+│   │   ├── App.jsx                # App shell
+│   │   ├── App.css                # Global styles
+│   │   ├── CartContext.jsx        # Cart state (Context API)
+│   │   ├── MainRoutes.jsx         # Route configuration
+│   │   └── main.jsx               # Entry point
+│   ├── index.html                 # HTML template
+│   ├── vite.config.js             # Vite configuration
+│   ├── eslint.config.js           # ESLint configuration
+│   ├── package.json               # Dependencies & scripts
+│   └── vercel.json                # Deployment config (Vercel)
+└── README.md
+```
+
 
 ## 🚀 Getting Started
 
