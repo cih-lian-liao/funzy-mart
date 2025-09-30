@@ -17,26 +17,6 @@
 </div>
 
 ---
-
-## 📋 Table of Contents
-
-- [🎯 Project Overview](#-project-overview)
-- [✨ Key Features](#-key-features)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [🏗️ Architecture](#️-architecture)
-- [🚀 Getting Started](#-getting-started)
-- [📱 Screenshots](#-screenshots)
-- [🎨 Design System](#-design-system)
-- [🔧 Development](#-development)
-- [🧪 Testing](#-testing)
-- [📈 Performance](#-performance)
-- [♿ Accessibility](#-accessibility)
-- [🔒 Security](#-security)
-- [📚 Learning Objectives](#-learning-objectives)
-- [🚀 Future Development](#-future-development)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#license)
-
 ---
 
 ## 🎯 Project Overview
